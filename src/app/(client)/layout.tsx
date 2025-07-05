@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <div className={`${inter.className} flex flex-col h-screen`}>
       <header>
-        <HeaderTop />
-        <Header />
+        {/* <HeaderTop /> */}
+        {/* <Header /> */}
       </header>
       <main className="flex-1">{children}</main>
       <footer className="mt-20">
