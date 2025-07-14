@@ -42,15 +42,40 @@ interface ITableCustomer {
   customers: User[];
 }
 
-const TableCustomer = ({ customers }: ITableCustomer) => {
+const TableCustomer = ({ customers = [] }: ITableCustomer) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filter customers based on search term
+  // Thống kê
+  const totalCustomers = customers.length;
+  const activeCustomers = customers.filter(c => c.status === "ACTIVE").length;
+  const suspendedCustomers = customers.filter(c => c.status === "SUSPENDED" || c.status === "INACTIVE").length;
+  const countries = Array.from(new Set(customers.map(c => c.customer.country))).length;
+
+  // Filter customers based on search term (nếu muốn thêm chức năng search thực tế)
 
   return (
     <div className="space-y-4 bg-white p-3 border rounded-xl">
+      {/* Thống kê khách hàng */}
+      <div className="flex justify-between gap-3 mb-2">
+        <div className="flex flex-col items-start justify-center flex-1 bg-blue-600 text-white rounded-lg p-3 shadow-sm min-w-0">
+          <span className="text-base font-medium">Tổng khách hàng</span>
+          <span className="text-2xl font-bold mt-1">{totalCustomers}</span>
+        </div>
+        <div className="flex flex-col items-start justify-center flex-1 bg-green-600 text-white rounded-lg p-3 shadow-sm min-w-0">
+          <span className="text-base font-medium">Đang hoạt động</span>
+          <span className="text-2xl font-bold mt-1">{activeCustomers}</span>
+        </div>
+        <div className="flex flex-col items-start justify-center flex-1 bg-yellow-400 text-black rounded-lg p-3 shadow-sm min-w-0">
+          <span className="text-base font-medium">Bị khóa / Tạm ngưng</span>
+          <span className="text-2xl font-bold mt-1">{suspendedCustomers}</span>
+        </div>
+        <div className="flex flex-col items-start justify-center flex-1 bg-cyan-400 text-white rounded-lg p-3 shadow-sm min-w-0">
+          <span className="text-base font-medium">Quốc gia</span>
+          <span className="text-2xl font-bold mt-1">{countries}</span>
+        </div>
+      </div>
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold">Customer Management</h2>
+        <h2 className="text-2xl font-bold">Quản lí Khách Hàng</h2>
         <div className="flex items-center gap-2">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />

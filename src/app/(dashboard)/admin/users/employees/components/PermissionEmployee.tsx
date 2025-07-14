@@ -57,7 +57,7 @@ const PermissionEmployee = ({
           <label htmlFor="role" className="font-medium">
             Chọn quyền:
           </label>
-          <select
+          {/* <select
             id="role"
             className="w-full p-2 border rounded-md"
             value={idRole}
@@ -69,6 +69,20 @@ const PermissionEmployee = ({
                 {role.name}
               </option>
             ))}
+          </select> */}
+          <select
+            id="role"
+            className="w-full p-2 border rounded-md"
+            value={idRole}
+            onChange={(e) => setIdRole(e.target.value)}
+          >
+            <option value="">Chọn quyền</option>
+            {Array.isArray(data) &&
+              data.map((role: { id: string; name: string }) => (
+                <option key={role.id} value={role.id}>
+                  {role.name}
+                </option>
+              ))}
           </select>
         </div>
         <div className="flex justify-end gap-2 mt-7">

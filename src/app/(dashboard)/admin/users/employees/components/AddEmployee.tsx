@@ -19,6 +19,7 @@ const AddEmployee = () => {
     password: "",
     position: "",
     department: "FRONT_DESK",
+    hireDate: "", // Thêm trường này
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,6 +60,7 @@ const AddEmployee = () => {
           password: "",
           position: "",
           department: "FRONT_DESK",
+          hireDate: "", // Đặt lại trường hireDate
         });
       }
     } catch (error: any) {
@@ -79,8 +81,8 @@ const AddEmployee = () => {
         <Modal
           isOpen={isOpen}
           onRequestClose={() => setIsOpen(false)}
-          className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-6xl mx-auto mt-40 outline-none"
-          overlayClassName="fixed inset-0 bg-black/20 bg-opacity-50 flex justify-center items-start z-50"
+          className="bg-white rounded-lg shadow-lg p-6 w-[90%] max-w-6xl mx-auto outline-none"
+          overlayClassName="fixed inset-0 bg-black/20 bg-opacity-50 flex justify-center items-center z-50"
           contentLabel="Thêm nhân viên mới"
         >
           <div className="flex justify-between items-center mb-6">
@@ -166,6 +168,17 @@ const AddEmployee = () => {
                 <Label htmlFor="position">Vị trí</Label>
                 <Input name="position" onChange={handleChange} />
               </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="hireDate">Ngày vào làm</Label>
+              <Input
+                type="date"
+                name="hireDate"
+                value={formData.hireDate}
+                onChange={handleChange}
+                placeholder="Ngày vào làm"
+              />
             </div>
 
             <div className="flex justify-end gap-4 pt-4">
