@@ -10,11 +10,11 @@ const page = () => {
   return (
     <div className="">
       {" "}
-      {/* <Banner />
+      <Banner />
       <ShearchRoomPage />
       <BeanHotel />
       <RoomShow />
-      <HotelShow /> */}
+      <HotelShow />
     </div>
   );
 };

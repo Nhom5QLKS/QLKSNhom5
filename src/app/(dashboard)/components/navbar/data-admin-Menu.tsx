@@ -98,58 +98,58 @@ export const adminMenu: IListItemAdmin[] = [
       },
     ],
   },
-  {
-    id: 5,
-    link: "/admin/discounts",
-    title: "Quản lý khuyến mãi",
-    icon: TagIcon,
-    subMenuItem: [
-      {
-        id: 501,
-        link: "/admin/discounts",
-        title: "Danh sách khuyến mãi",
-        icon: TagIcon,
-      },
-    ],
-  },
-  {
-    id: 6,
-    link: "/admin/reviews",
-    title: "Quản lý hành vi",
-    icon: StarIcon,
-    subMenuItem: [
-      {
-        id: 601,
-        link: "/admin/reviews",
-        title: "Danh sách đánh giá",
-        icon: StarIcon,
-      },
-      {
-        id: 602,
-        link: "/admin/reviews/audit-logs",
-        title: "Xem nhật ký",
-        icon: DocumentTextIcon,
-      },
-    ],
-  },
-  {
-    id: 9,
-    link: "/admin/seasonal-rates",
-    title: "Quản lý giá theo mùa",
-    icon: ChartBarIcon,
-    subMenuItem: [
-      {
-        id: 901,
-        link: "/admin/seasonal-rates",
-        title: "Danh sách giá theo mùa",
-        icon: ChartBarIcon,
-      },
-      {
-        id: 902,
-        link: "/admin/seasonal-rates/add",
-        title: "Thêm giá theo mùa",
-        icon: ChartBarIcon,
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   link: "/admin/discounts",
+  //   title: "Quản lý khuyến mãi",
+  //   icon: TagIcon,
+  //   subMenuItem: [
+  //     {
+  //       id: 501,
+  //       link: "/admin/discounts",
+  //       title: "Danh sách khuyến mãi",
+  //       icon: TagIcon,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 6,
+  //   link: "/admin/reviews",
+  //   title: "Quản lý hành vi",
+  //   icon: StarIcon,
+  //   subMenuItem: [
+  //     {
+  //       id: 601,
+  //       link: "/admin/reviews",
+  //       title: "Danh sách đánh giá",
+  //       icon: StarIcon,
+  //     },
+  //     {
+  //       id: 602,
+  //       link: "/admin/reviews/audit-logs",
+  //       title: "Xem nhật ký",
+  //       icon: DocumentTextIcon,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 9,
+  //   link: "/admin/seasonal-rates",
+  //   title: "Quản lý giá theo mùa",
+  //   icon: ChartBarIcon,
+  //   subMenuItem: [
+  //     {
+  //       id: 901,
+  //       link: "/admin/seasonal-rates",
+  //       title: "Danh sách giá theo mùa",
+  //       icon: ChartBarIcon,
+  //     },
+  //     {
+  //       id: 902,
+  //       link: "/admin/seasonal-rates/add",
+  //       title: "Thêm giá theo mùa",
+  //       icon: ChartBarIcon,
+  //     },
+  //   ],
+  // },
 ];
